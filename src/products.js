@@ -1,0 +1,41 @@
+module.exports = [
+  {
+    name: "Pants",
+    shortname: "Pants",
+    price: "50€",
+    image: "/images/Categorie_Pants.png",
+    smallimages: ["/images/logo.png", "/images/Categorie_Pants.png"],
+    description: "Very cool hoodie",
+    category: "pants",
+  },
+  {
+    name: "Oversiozed aaksdfjasd kfjasd jasdkfjasö Sirt",
+    shortname: "black_small_askda",
+    price: "50€",
+    image: "/images/Nineties_Black_Tee.png",
+    smallimages: [
+      "/images/Nineties_Black_Tee.png",
+      "/images/Cream_Tee_Back.png",
+    ],
+    description: "Very cool hoodie",
+    category: "tshirts",
+  },
+  {
+    name: "Hoodie",
+    shortname: "Hoodie",
+    price: "50€",
+    image: "/images/Hoodie.png",
+    smallimages: ["/images/Hoodie2.png", "/images/Hoodie.png"],
+    description: "Very cool hoodie",
+    category: "hoodies",
+  },
+  {
+    name: "ULTRA-HEAVYWEIGHT HOODIE - CREAM",
+    shortname: "Cream_Hoodie",
+    price: "50€",
+    image: "/images/X.png",
+    smallimages: ["/images/X.png", "/images/X2.png"],
+    description: "Cream like your Ice",
+    category: "hoodies",
+  },
+];
