@@ -7,6 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
 .navbar {
@@ -61,6 +62,7 @@ p {
   font-size: 30px;
   line-height: 40px;
   margin: 25px 0;
+  color: #fff;
 }
 .col-2 p {
   color: rgb(255, 255, 255);
@@ -80,8 +82,45 @@ p {
 .btn:hover {
   background: #563434;
 }
+
+.start-image {
+  width: 100%;
+  height: calc(100vh - 160px);
+  object-fit: cover;
+  position: absolute;
+}
+
+.start-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.start-box {
+  width: 100%;
+  position: relative;
+  padding: 50px;
+  height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.start-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start-items h1 {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
 .header {
-  background: radial-gradient(rgb(114, 114, 114), #303030);
+  background-color: #000;
 }
 .header .row {
   margin-top: 70px;
@@ -262,31 +301,6 @@ ul {
   display: none;
 }
 
-@media only screen and (max-width: 800px) {
-  nav ul {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    background: #333;
-    width: 100%;
-    overflow: hidden;
-    transition: max-height 0.5s;
-  }
-  nav ul li {
-    display: block;
-    margin-right: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  nav ul li a {
-    color: #fff;
-  }
-  .menu-icon {
-    z-index: 50000;
-    display: block;
-    cursor: pointer;
-  }
-}
 /*-------- all products page -------*/
 
 .row-2 {
@@ -406,6 +420,17 @@ td a {
   color: #ff523b;
   font-size: 12px;
 }
+.burger {
+  margin-left: 20px;
+  display: none;
+}
+.burger div {
+  transition: all 0.5s ease;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 5px;
+}
 td img {
   width: 80px;
   height: 80px;
@@ -495,6 +520,18 @@ form a {
   transform: translateX(100px);
 }
 
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 @media only screen and (max-width: 600px) {
   .row {
     text-align: center;
@@ -522,5 +559,45 @@ form a {
   }
   .category {
     width: 70%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  #MenuItems {
+    max-height: 0;
+  }
+  .container {
+    padding: 0;
+  }
+  .navbar {
+    background: #000;
+  }
+  nav ul {
+    z-index: 3;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    background: #000;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    color: #fff;
+  }
+  .menu-icon {
+    z-index: 50000;
+    display: block;
+    cursor: pointer;
   }
 }

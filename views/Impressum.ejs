@@ -33,11 +33,11 @@
           </nav>
           <div class="cartimg">
             <img src="images/Cart.png" width="30px" height="30px" />
-            <img
-              src="images/Menu.png"
-              class="menu-icon"
-              onclick="menutoggle()"
-            />
+          </div>
+          <div onclick="menutoggle()" class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
           </div>
         </div>
       </div>
@@ -77,10 +77,10 @@
             <div class="footer-col-2">
               <h3>Useful Links</h3>
               <ul>
-                <li><a href="AGB.html">AGB</a></li>
-                <li><a href="Support.html">Support</a></li>
-                <li><a href="Impressum.html">Impressum</a></li>
-                <li><a href="Return_Policy.html">Return Policy</a></li>
+                <li><a href="agb">ToS</a></li>
+                <li><a href="support">Support</a></li>
+                <li><a href="imprint">Imprint</a></li>
+                <li><a href="return">Return Policy</a></li>
               </ul>
             </div>
             <div class="footer-col-3">
@@ -106,19 +106,22 @@
           <p class="copyright">Copyright 2021 - Nineties Clothing</p>
         </div>
       </div>
-      <script>
-        var MenuItems = document.getElementById("MenuItems");
-  
-        MenuItems.style.maxHeight = "0px";
-  
-        function menutoggle() {
-          if (MenuItems.style.maxHeight == "0px") {
-            MenuItems.style.maxHeight = "200px";
-          } else {
-            MenuItems.style.maxHeight = "0px";
-          }
-        }
-      </script>
+      
+<script>
+  var MenuItems = document.getElementById("MenuItems");
+  var burger = document.getElementsByClassName("burger")[0];
+
+  MenuItems.style.maxHeight = "0px";
+
+  function menutoggle() {
+    burger.classList.toggle("toggle")
+    if (MenuItems.style.maxHeight == "0px") {
+      MenuItems.style.maxHeight = "200px";
+    } else {
+      MenuItems.style.maxHeight = "0px";
+    }
+  }
+</script>
     </body>
   </html>
   
