@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nineties About Us</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style/partials/base.css" />
+    <link rel="stylesheet" href="/style/partials/header.css" />
+    <link rel="stylesheet" href="/style/partials/footer.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -16,23 +18,20 @@
     />
   </head>
   <body>
-    <div class="header">
-      <div class="container">
-        <div class="navbar">
-          <div class="logo">
-            <a href="/"><img src="images/Unbenannt-3.png" width="125px" /></a>
-          </div>
-          <nav>
-            <ul id="MenuItems">
+    <nav class="header">
+        <a href="/"><img class="header-logo" src="images/Unbenannt-3.png" /></a>
+        <div class="header-items">
+          <div id="menu-links" class="menu-links">
+            <ul>
               <li><a href="/">Home</a></li>
               <li><a href="categories">Shop</a></li>
               <li><a href="aboutus">About Us</a></li>
               <li><a href="contact">Contact</a></li>
               <li><a href="support">Support</a></li>
             </ul>
-          </nav>
-          <div class="cartimg">
-            <img src="images/Cart.png" width="30px" height="30px" />
+          </div>
+          <div>
+            <img class="cart" src="images/Cart.png"/>
           </div>
           <div onclick="menutoggle()" class="burger">
             <div class="line1"></div>
@@ -40,9 +39,9 @@
             <div class="line3"></div>
           </div>
         </div>
-      </div>
-    </div>
+    </nav>
     <!---- brands --->
+
     <div class="brands">
         <div class="small-container">
           <div class="row">
@@ -107,17 +106,15 @@
         </div>
       </div>
       <script>
-        var MenuItems = document.getElementById("MenuItems");
+        var menulinks = document.getElementById("menu-links");
         var burger = document.getElementsByClassName("burger")[0];
-  
-        MenuItems.style.maxHeight = "0px";
-  
+
         function menutoggle() {
           burger.classList.toggle("toggle")
-          if (MenuItems.style.maxHeight == "0px") {
-            MenuItems.style.maxHeight = "200px";
+          if (menulinks.style.maxHeight == "0vh" || menulinks.style.maxHeight == "") {
+            menulinks.style.maxHeight = "100vh"
           } else {
-            MenuItems.style.maxHeight = "0px";
+            menulinks.style.maxHeight = "0vh"
           }
         }
       </script>
